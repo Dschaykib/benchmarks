@@ -100,4 +100,66 @@ save_benchmark <- function(result_list,
               sep = ";",
               dec = ".")
   
+
+# create plots ------------------------------------------------------------
+  
+  grid[, INDEX := .I]
+  get_mean_time <- function(i.grid, list) {
+    #i.grid <- 1
+    x <- result_list[[i.grid]]
+    
+    time_dt <- as.data.table(x)[, list("MEAN_TIME" = mean(time)), by = expr]
+    time_dt[, INDEX := i.grid]
+  }
+  mean_dt <- rbindlist(lapply(grid$INDEX, get_mean_time, list = result_list),
+                       use.names = TRUE,
+                       fill = TRUE)
+  # merge grid with mean_dt
+  grid_mean_dt <- merge(x = grid, y = mean_dt, by = "INDEX", all = TRUE)
+  grid_mean_dt_long <- melt.data.table(data = grid_mean_dt,
+                                       id.vars = c("INDEX", "expr", "MEAN_TIME"),
+                                       variable.name = "PARAMETER",
+                                       value.name = "VALUE")
+  this_unit <- attributes(result_list[[1]])$unit
+  
+  suppressWarnings(
+    ggplot(grid_mean_dt_long, aes(x = VALUE, y = MEAN_TIME, color = expr)) +
+      geom_point() + 
+      ylab(paste0("time in ", this_unit)) +
+      ggtitle(description) +
+      geom_smooth(se = FALSE) + 
+      facet_wrap(~PARAMETER, scales = "free")
+  )
+  
+  this_picture <- "benchmark_grid.png"
+  ggsave(filename = paste0(folder, this_picture),
+         width = 20,
+         height = 8,
+         units = "cm")
+  
+# save README -------------------------------------------------------------
+  
+  readme <- c(
+    paste0("## ", description, "\n"),
+    "\n",
+    "\n",
+    "## used grid settings \n",
+    knitr::kable(grid, format = "markdown"),
+    "\n",
+    "## plot per grid parameter \n",
+    "![](", this_picture,")\n",
+    "\n",
+    "##  all result summaries \n",
+    
+    unlist(lapply(seq_len(length(result_list)), function(x) {
+      c(paste0("#### index ", x, "\n"),
+             knitr::kable(summary(result_list[[x]]), format = "markdown"),
+             "\n")
+      }
+    ))
+  )
+  
+  writeLines(text = readme, con = paste0(folder, "README.md"))
+  
+  
 }

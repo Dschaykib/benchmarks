@@ -1,8 +1,9 @@
 
 # settings ----------------------------------------------------------------
-
+library(data.table)
 library(helfRlein)
-
+source("functions/save_benchmark.R")
+setDTthreads(1)
 
 # get benchmark files ------------------------------------------------------
 
