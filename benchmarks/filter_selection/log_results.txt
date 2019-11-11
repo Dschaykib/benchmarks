@@ -1,0 +1,5 @@
+DATE;TEST;BEST;TIME_FACTOR;BEST_RUNS;GRID;DURATION;ALTERNATIVES;COMMENT
+2019-11-08 10:27:47;Selection rows by a filter criterion.;DT == &;-131.4%;24;40;00:01:54;<details>DT %in%, DT %chin%</details>;changing the colum type and the number of unique values
+2019-11-08 10:34:28;Selection rows by a filter criterion.;DT %in%;23.5%;12;20;00:01:48;<details>DT == &, DT %chin%</details>;changing the colum type and the number of unique values
+2019-11-11 14:18:07;Selection rows by a filter criterion.;DT %in%;21.8%;12;20;00:01:54;<details>DT == &, DT %chin%</details>;changing the colum type and the number of unique values
+2019-11-11 16:50:02;Selection rows by a filter criterion.;DT %in%;21.7%;13;20;00:01:45;<details>DT == &, DT %chin%</details>;changing the colum type and the number of unique values

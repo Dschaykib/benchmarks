@@ -15,15 +15,15 @@ source("functions/save_benchmark.R")
 # test setup --------------------------------------------------------------
 
 # folder for results
-folder <- "benchmarks/dummy_creation/"
+folder <- "benchmarks/filter_selection/"
 
 # test description
-description <- "Creating dummies out of factor variable."
+description <- "Selection rows by a filter criterion."
 
 # number of repetitions
 reps <- 100L
 
-comments <- "changing size and number of unique values"
+comments <- "changing the colum type and the number of unique values"
 
 start_time <- Sys.time()
 
@@ -33,8 +33,10 @@ start_time <- Sys.time()
 
 # if there are different values to test
 grid <- as.data.table(expand.grid(
-  param_1 = 10^c(2:5), # number of observations
-  param_2 = c(5,10,20))) # number of unique values
+  param_1 = 10^c(5,6), # number of rows
+  param_2 = c(5,10,20,100,1000), # number of unique values
+  param_3 = c("numeric", "character"),
+  stringsAsFactors = FALSE)) # type of column
 
 result_list <- as.list(rep(NA, dim(grid)[1]))
 best_list <- as.list(rep(NA, dim(grid)[1]))
@@ -47,29 +49,25 @@ helfRlein::checkdir(folder)
 # run for each grid possible
 
 for (i in c(1:nrow(grid))) {
-  # i <- 1
+  # i <- 40
+  set.seed(1234)
   
-  i_obs <- grid[i, param_1]
-  i_values <- grid[i, param_2]
+  n_rows <- grid[i, param_1]
+  k_values <- grid[i, param_2]
+  var_type <- grid[i, param_3]
   
   # use grid parameters to define tested setup
-  if (exists("DT")) {
-    rm(DT)
-  }
-  DT <- data.table(Var1 = sample(x = letters[1:i_values],
-                                 size = i_obs,
-                                 replace = TRUE))
-  all_values <- DT[, unique(Var1)]
+  # set sample values and data
+  this_values <- as.vector(x = 1:k_values, mode = var_type)
+  this_var <- sample(x = this_values, size = n_rows, replace = TRUE)
+  
+  data_dt <- data.table(Var1 = this_var)
+  #data_df <- data.frame(Var1 = this_var)
   
   tmp <- microbenchmark(
-    "lapply" = DT[, (all_values) := lapply(all_values,
-                                           function(x) as.numeric(Var1 == x))],
-    "for-loop" = {
-      for (i.cat in all_values) {
-        # i.cat <- 1
-        DT[, c(letters[i.cat]) := as.numeric(Var1 == i.cat)]
-        }},
-    "by" = DT[, c(all_values) := as.list(as.numeric(all_values == unique(Var1))), by = Var1],
+    "DT == &" = data_dt[Var1 == this_values[1] | Var1 == this_values[2] |Var1 == this_values[3],],
+    "DT %in%" = data_dt[Var1 %in% this_values[1:3],],
+    "DT %chin%"  = data_dt[Var1 %chin% this_values[1:3],],
     times = reps,
     control = list(warmup = 10L),
     unit = "ms")
@@ -81,6 +79,8 @@ for (i in c(1:nrow(grid))) {
   tmp_sum <- summary(tmp)
   best_list[[i]] <- as.character(tmp_sum$expr[tmp_sum$mean == min(tmp_sum$mean)])
   
+  # progress
+  statusbar(run = i, max.run = nrow(grid))
 }
 
 

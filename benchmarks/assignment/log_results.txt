@@ -3,3 +3,5 @@ DATE;TEST;BEST;BEST_RUNS;GRID;DURATION;REPS;ALTERNATIVES;COMMENT
 2019-10-30 15:00:23;assign anything with <- or = ;arrow sign;6;6;00:00:01;100;<details></details>;varying size of vector
 2019-10-31 11:25:51;assign anything with <- or = ;arrow sign;NaN%;6;6;00:00:01;100;<details></details>;varying size of vector
 2019-10-31 11:44:58;assign anything with <- or = ;equal sign;1.9%;5;6;00:00:08;100;<details>arrow sign</details>;varying size of vector
+2019-11-11 14:15:37;assign with <- or = ;equal sign;10.9%;6;6;00:00:02;<details>arrow sign</details>;varying size of vector
+2019-11-11 16:47:46;assign with <- or = ;equal sign;8.3%;5;6;00:00:01;<details>arrow sign</details>;varying size of vector

@@ -2,3 +2,5 @@ DATE;TEST;BEST;BEST_RUNS;GIRD;DURATION;REPS;ALTERNATIVES;COMMENT
 2019-10-21 10:17:59;get range of numeric vector;max(x) - min(x);6;6;00:00:15;100;range(x);
 2019-10-30 15:00:37;get range of numeric vector;max(x) - min(x);6;6;00:00:14;100;<details>range(x)</details>;varying size
 2019-10-31 11:26:06;get range of numeric vector;max(x) - min(x);49.1%;6;6;00:00:14;100;<details>range(x)</details>;varying size
+2019-11-11 14:18:24;get range of numeric vector;max(x) - min(x);55%;6;6;00:00:16;<details>range(x)</details>;varying size
+2019-11-11 16:50:19;get range of numeric vector;max(x) - min(x);57.1%;6;6;00:00:16;<details>range(x)</details>;varying size

@@ -5,6 +5,8 @@ library(microbenchmark)
 library(helfRlein)
 library(data.table)
 
+source("functions/save_benchmark.R")
+
 # add more here
 library(dplyr)
 #
@@ -32,7 +34,7 @@ start_time <- Sys.time()
 
 # if there are different values to test
 grid <- as.data.table(expand.grid(
-  param_1 = 10^c(3, 5)))
+  param_1 = 10^c(2:5)))
 
 result_list <- as.list(rep(NA, dim(grid)[1]))
 best_list <- as.list(rep(NA, dim(grid)[1]))
