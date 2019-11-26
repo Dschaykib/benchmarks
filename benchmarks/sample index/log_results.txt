@@ -4,3 +4,4 @@ DATE;TEST;BEST;BEST_RUNS;GIRD;DURATION;REPS;ALTERNATIVES;COMMENT
 2019-10-31 11:26:17;Creating a sample index.;sample;40.9%;3;5;00:00:11;100;<details>runif, rdunif</details>;varying sample size and range
 2019-11-11 14:18:38;Creating a sample index.;sample;38.7%;3;5;00:00:12;<details>runif, rdunif</details>;varying sample size and range
 2019-11-11 16:50:31;Creating a sample index.;sample;40%;3;5;00:00:11;<details>runif, rdunif</details>;varying sample size and range
+2019-11-26 16:42:48;Creating a sample index.;sample;43.2%;4/5;00:00:11;<details>runif, rdunif</details>;varying sample size and range
