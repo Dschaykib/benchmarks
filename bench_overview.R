@@ -18,7 +18,7 @@ results_overview <- read_files(results_files, readRDS)
 # save as README ----------------------------------------------------------
 
 readme <- c(
-  "##Overview of different benchmarks \n",
+  "## Overview of different benchmarks \n",
   "\n",
   "For more details on a benchmark, please have a look in the folder ",
   "[benchmarks](../benchmarks).",

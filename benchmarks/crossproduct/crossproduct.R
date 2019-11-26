@@ -33,9 +33,9 @@ start_time <- Sys.time()
 # if there are different values to test
 grid <- as.data.table(expand.grid(
   # number of rows
-  param_1 = 10^c(1:5),
+  row_num = 10^c(1:5),
   # number of columns
-  param_2 = 10^c(1:2)))
+  col_num = 10^c(1:2)))
 
 result_list <- as.list(rep(NA, dim(grid)[1]))
 best_list <- as.list(rep(NA, dim(grid)[1]))
@@ -50,14 +50,14 @@ helfRlein::checkdir(folder)
 for (i in c(1:nrow(grid))) {
   # i <- 10
   
-  i_param_1 <- grid[i, param_1]
-  i_param_2 <- grid[i, param_2]
+  i.row_num <- grid[i, row_num]
+  i.col_num <- grid[i, col_num]
   
   # use grid parameters to define tested setup
   
-  S <- matrix(runif(i_param_1 * i_param_2),
-              nrow = i_param_1,
-              ncol = i_param_2)
+  S <- matrix(runif(i.row_num * i.col_num),
+              nrow = i.row_num,
+              ncol = i.col_num)
   
   
   tmp <- microbenchmark(

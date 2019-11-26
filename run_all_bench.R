@@ -2,6 +2,7 @@
 # settings ----------------------------------------------------------------
 library(data.table)
 library(helfRlein)
+library(ggplot2)
 source("functions/save_benchmark.R")
 setDTthreads(1)
 
@@ -21,8 +22,8 @@ bench_files <- bench_files[!grepl("crossproduct.R", bench_files)]
 
 for (i.bench in bench_files) {
   # i.bench <- bench_files[2]
+  print(basename(i.bench))
   source(file = i.bench, local = TRUE)
-  statusbar(run = i.bench, max.run = bench_files, info = basename(i.bench))
 }
 
 

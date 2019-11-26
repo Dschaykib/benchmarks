@@ -35,7 +35,7 @@ start_time <- Sys.time()
 
 # if there are different values to test
 grid <- as.data.table(expand.grid(
-  param_1 = 10^c(2:7)))
+  sample_size = 10^c(2:7)))
 
 result_list <- as.list(rep(NA, dim(grid)[1]))
 best_list <- as.list(rep(NA, dim(grid)[1]))
@@ -51,10 +51,10 @@ N <- 1:1e7
 for (i in c(1:nrow(grid))) {
   # i <- 6
   
-  i_param_1 <- grid[i, param_1]
+  i.sample_size <- grid[i, sample_size]
   
   # use grid parameters to define tested setup
-  x <- sample(N, i_param_1, replace = TRUE)
+  x <- sample(N, i.sample_size, replace = TRUE)
   
   tmp <- microbenchmark(
     range(x),

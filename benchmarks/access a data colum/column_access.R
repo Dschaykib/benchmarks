@@ -34,7 +34,7 @@ start_time <- Sys.time()
 
 # if there are different values to test
 grid <- as.data.table(expand.grid(
-  param_1 = 10^c(2:5)))
+  size = 10^c(2:5)))
 
 result_list <- as.list(rep(NA, dim(grid)[1]))
 best_list <- as.list(rep(NA, dim(grid)[1]))
@@ -55,10 +55,10 @@ helfRlein::checkdir(folder)
 for (i in c(1:nrow(grid))) {
   # i <- 1
   
-  i_param_1 <- grid[i, param_1]
+  i.size <- grid[i, size]
   
   # use grid parameters to define tested setup
-  iris.rep <- rbindlist(rep(list(iris), i_param_1))
+  iris.rep <- rbindlist(rep(list(iris), i.size))
   
   iris.df <- as.data.frame(iris.rep)
   iris.dt <- as.data.table(iris.rep)

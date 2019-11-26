@@ -72,9 +72,9 @@ save_benchmark <- function(result_list,
     # percent of mean saved time
     TIME_FACTOR = time_saving_factor,
     # how often was it the best
-    BEST_RUNS = best_runs,
+    BEST_RUNS = paste0(best_runs, "/", nrow(grid)),
     # if different setups are used (eg. variing n)
-    GRID = nrow(grid),
+    #GRID = nrow(grid),
     # duration of test
     DURATION = time_char,
     # number of repetitions
@@ -116,26 +116,69 @@ save_benchmark <- function(result_list,
                        fill = TRUE)
   # merge grid with mean_dt
   grid_mean_dt <- merge(x = grid, y = mean_dt, by = "INDEX", all = TRUE)
+  id_vars <- c("INDEX", "expr", "MEAN_TIME")
+  measure_vars <- setdiff(names(grid_mean_dt), id_vars)
+  measure_vars_class <- grid_mean_dt[, sapply(.SD, class), .SDcol = measure_vars]
+  measure_vars_char <- measure_vars[measure_vars_class == "character"]
+  measure_vars_num <- measure_vars[measure_vars_class == "numeric"]
+  
   grid_mean_dt_long <- melt.data.table(data = grid_mean_dt,
-                                       id.vars = c("INDEX", "expr", "MEAN_TIME"),
-                                       variable.name = "PARAMETER",
-                                       value.name = "VALUE")
+                                       id.vars = c("INDEX", "expr", "MEAN_TIME",
+                                                   measure_vars_char),
+                                       measure.vars = measure_vars_num,
+                                       variable.name = "PARAMETER_NUM",
+                                       value.name = "VALUE_NUM")
+  grid_mean_dt_long <- melt.data.table(data = grid_mean_dt_long,
+                                       id.vars = c("INDEX", "expr", "MEAN_TIME",
+                                                   "PARAMETER_NUM",
+                                                   "VALUE_NUM"),
+                                       measure.vars = measure_vars_char,
+                                       variable.name = "PARAMETER_CHAR",
+                                       value.name = "VALUE_CHAR")
   this_unit <- attributes(result_list[[1]])$unit
   
-  suppressWarnings(
-    ggplot(grid_mean_dt_long, aes(x = VALUE, y = MEAN_TIME, color = expr)) +
-      geom_point() + 
-      ylab(paste0("time in ", this_unit)) +
-      ggtitle(description) +
-      geom_smooth(se = FALSE) + 
-      facet_wrap(~PARAMETER, scales = "free")
-  )
+  # plot for numerics
+  this_picture_num <- this_picture_char <- c()
+  if ("VALUE_NUM" %in% names(grid_mean_dt_long)) {
+    suppressWarnings(
+      ggplot(grid_mean_dt_long, aes(x = VALUE_NUM, y = MEAN_TIME, color = expr)) +
+        geom_point() + 
+        ylab(paste0("time in ", this_unit)) +
+        ggtitle(description) +
+        xlab("") +
+        stat_summary(aes(group = expr),
+                     fun.y = mean, geom = "line") +
+        facet_wrap(~PARAMETER_NUM, scales = "free")
+    )
+    
+    this_picture_num <- "benchmark_grid_num.png"
+    ggsave(filename = paste0(folder, this_picture_num),
+           width = 20,
+           height = 8,
+           units = "cm")
+  }
   
-  this_picture <- "benchmark_grid.png"
-  ggsave(filename = paste0(folder, this_picture),
-         width = 20,
-         height = 8,
-         units = "cm")
+  # plot for characters
+  if ("VALUE_CHAR" %in% names(grid_mean_dt_long)) {
+    suppressWarnings(
+      ggplot(grid_mean_dt_long, aes(x = VALUE_CHAR, y = MEAN_TIME, color = expr)) +
+        geom_point() + 
+        ylab(paste0("time in ", this_unit)) +
+        ggtitle(description) +
+        xlab("") +
+        stat_summary(aes(group = expr),
+                     fun.y = mean, geom = "line") +
+        facet_wrap(~PARAMETER_CHAR, scales = "free")
+    )
+    
+    this_picture_char <- "benchmark_grid_char.png"
+    ggsave(filename = paste0(folder, this_picture_char),
+           width = 20,
+           height = 8,
+           units = "cm")
+  }
+  
+  
   
 # save README -------------------------------------------------------------
   
@@ -146,8 +189,18 @@ save_benchmark <- function(result_list,
     "## used grid settings \n",
     knitr::kable(grid, format = "markdown"),
     "\n",
-    "## plot per grid parameter \n",
-    "![](", this_picture,")\n",
+    if (length(this_picture_num) > 0 ) {
+      c("## plot per numeric grid parameter \n",
+        "![](", this_picture_num,")\n")
+    } else {
+      c()
+    },
+    if (length(this_picture_char) > 0 ) {
+      c("## plot per character grid parameter \n",
+        "![](", this_picture_char,")\n")
+    } else {
+      c()
+    },
     "\n",
     "##  all result summaries \n",
     

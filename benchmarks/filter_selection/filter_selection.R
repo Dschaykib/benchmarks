@@ -33,9 +33,9 @@ start_time <- Sys.time()
 
 # if there are different values to test
 grid <- as.data.table(expand.grid(
-  param_1 = 10^c(5,6), # number of rows
-  param_2 = c(5,10,20,100,1000), # number of unique values
-  param_3 = c("numeric", "character"),
+  n_rows = 10^c(5,6), # number of rows
+  k_values = c(5,10,20,100,1000), # number of unique values
+  var_type = c("numeric", "character"),
   stringsAsFactors = FALSE)) # type of column
 
 result_list <- as.list(rep(NA, dim(grid)[1]))
@@ -52,9 +52,9 @@ for (i in c(1:nrow(grid))) {
   # i <- 40
   set.seed(1234)
   
-  n_rows <- grid[i, param_1]
-  k_values <- grid[i, param_2]
-  var_type <- grid[i, param_3]
+  n_rows <- grid[i, n_rows]
+  k_values <- grid[i, k_values]
+  var_type <- grid[i, var_type]
   
   # use grid parameters to define tested setup
   # set sample values and data

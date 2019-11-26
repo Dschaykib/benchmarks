@@ -33,8 +33,8 @@ start_time <- Sys.time()
 
 # if there are different values to test
 grid <- as.data.table(expand.grid(
-  param_1 = 10^c(2:5), # number of observations
-  param_2 = c(5,10,20))) # number of unique values
+  sample_size = 10^c(2:5), # number of observations
+  unique_values = c(5,10,20))) # number of unique values
 
 result_list <- as.list(rep(NA, dim(grid)[1]))
 best_list <- as.list(rep(NA, dim(grid)[1]))
@@ -49,15 +49,15 @@ helfRlein::checkdir(folder)
 for (i in c(1:nrow(grid))) {
   # i <- 1
   
-  i_obs <- grid[i, param_1]
-  i_values <- grid[i, param_2]
+  i.sample_size <- grid[i, sample_size]
+  i.unique_values <- grid[i, unique_values]
   
   # use grid parameters to define tested setup
   if (exists("DT")) {
     rm(DT)
   }
-  DT <- data.table(Var1 = sample(x = letters[1:i_values],
-                                 size = i_obs,
+  DT <- data.table(Var1 = sample(x = letters[1:i.unique_values],
+                                 size = i.sample_size,
                                  replace = TRUE))
   all_values <- DT[, unique(Var1)]
   

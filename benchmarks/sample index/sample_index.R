@@ -35,9 +35,9 @@ start_time <- Sys.time()
 # if there are different values to test
 grid <- as.data.table(expand.grid(
   # sample size
-  param_1 = 10^c(2:6),
+  sample_size = 10^c(2:6),
   # population size
-  param_2 = c(10000)))
+  population_size = c(10000)))
 
 result_list <- as.list(rep(NA, dim(grid)[1]))
 best_list <- as.list(rep(NA, dim(grid)[1]))
@@ -52,18 +52,15 @@ helfRlein::checkdir(folder)
 for (i in c(1:nrow(grid))) {
   # i <- 1
   
-  i_param_1 <- grid[i, param_1]
-  i_param_2 <- grid[i, param_2]
-  
   # use grid parameters to define tested setup
+  i.sample_size <- grid[i, sample_size]
+  i.population_size <- grid[i, population_size]
   
-  x <- i_param_1
-  N <- i_param_2
   
   tmp <- microbenchmark(
-    "runif" = round(runif(x, min = 1, max = N)),
-    "sample" = sample(1:N, x, replace = TRUE),
-    "rdunif" = rdunif(x, N, 1),
+    "runif" = round(runif(i.sample_size, min = 1, max = i.population_size)),
+    "sample" = sample(1:i.population_size, i.sample_size, replace = TRUE),
+    "rdunif" = rdunif(i.sample_size, i.population_size, 1),
     times = reps,
     setup = set.seed(i),
     control = list(warmup = 10L),
