@@ -23,6 +23,8 @@ save_benchmark <- function(result_list,
                            grid,
                            reps,
                            comments) {
+  require(ggplot2)
+  
   ## saving all data
   saveRDS(object = result_list, file = paste0(folder, "result_list.rds"))
   
@@ -214,5 +216,8 @@ save_benchmark <- function(result_list,
   
   writeLines(text = readme, con = paste0(folder, "README.md"))
   
+  
+  # update README -----------------------------------------------------------
+  update_bench_overview()
   
 }
