@@ -35,6 +35,12 @@ vignettes/*.pdf
 *.knit.md
 README.html
 
+# results within template
+benchmarks/00_template_folder/benchmark_grid_num.png
+benchmarks/00_template_folder/last_result.rds
+benchmarks/00_template_folder/log_results.txt
+benchmarks/00_template_folder/result_list.rds
+
 # Shiny token, see https://shiny.rstudio.com/articles/shinyapps.html
 rsconnect/
 .Rproj.user

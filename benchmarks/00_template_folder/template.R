@@ -9,13 +9,11 @@ source("functions/save_benchmark.R")
 
 # add more here
 #
-#
-#
 
 # test setup --------------------------------------------------------------
 
 # folder for results
-folder <- "benchmarks/unique_values/"
+folder <- "benchmarks/00_template_folder/"
 
 # test description
 description <- "A short description of what is tested."
@@ -54,11 +52,11 @@ for (i in c(1:nrow(grid))) {
   
   # use grid parameters to define tested setup
   
-  x <- cut(rnorm(i_param_1), i_param_2)
+  x <- rnorm(n = i_param_1, mean = i_param_2)
   
   tmp <- microbenchmark(
-    unique(x),
-    droplevels(x),
+    "Alternative 1" = mean(x),
+    "Alternative 2" = sum(x) / length(x),
     times = reps,
     control = list(warmup = 10L),
     unit = "ms")
