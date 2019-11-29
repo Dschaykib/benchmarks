@@ -14,7 +14,7 @@ library(dplyr)
 # test setup --------------------------------------------------------------
 
 # folder for results
-folder <- "benchmarks/access a data colum/"
+folder <- "benchmarks/column_access/"
 
 # test description
 description <- "Accsess a colum in a data frame, table or tibble."

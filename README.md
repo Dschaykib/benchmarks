@@ -22,11 +22,11 @@ respective folder within [benchmarks](../benchmarks).
 
 |DATE                |TEST                                              |COMMENT                                                 |BEST            |TIME_FACTOR |BEST_RUNS |DETAILS                                 |DURATION |
 |:-------------------|:-------------------------------------------------|:-------------------------------------------------------|:---------------|:-----------|:---------|:---------------------------------------|:--------|
-|2019-11-29 08:53:33 |Accsess a colum in a data frame, table or tibble. |varying size of data                                    |$ tbl           |66.9%       |4/4       |[link](benchmarks/access a data colum/) |00:00:06 |
+|2019-11-29 08:53:33 |Accsess a colum in a data frame, table or tibble. |varying size of data                                    |$ tbl           |66.9%       |4/4       |[link](benchmarks/column_access/) |00:00:06 |
 |2019-11-29 08:53:36 |assign with <- or =                               |varying size of vector                                  |equal sign      |27.4%       |6/6       |[link](benchmarks/assignment/)          |00:00:01 |
 |2019-11-29 08:56:19 |Calculation of the cross product                  |varying number of rows and colums                       |crossprod(S)    |12.1%       |9/10      |[link](benchmarks/crossproduct/)        |00:02:42 |
 |2019-11-29 08:56:49 |Creating dummies out of factor variable.          |changing size and number of unique values               |by              |49.8%       |7/12      |[link](benchmarks/dummy_creation/)      |00:00:29 |
 |2019-11-29 08:58:35 |Selection rows by a filter criterion.             |changing the colum type and the number of unique values |DT %in%         |21.4%       |12/20     |[link](benchmarks/filter_selection/)    |00:01:45 |
 |2019-11-29 08:58:51 |get range of numeric vector                       |varying size                                            |max(x) - min(x) |48.4%       |6/6       |[link](benchmarks/range/)               |00:00:14 |
-|2019-11-29 08:59:04 |Creating a sample index.                          |varying sample size and range                           |sample          |41.5%       |3/5       |[link](benchmarks/sample index/)        |00:00:12 |
+|2019-11-29 08:59:04 |Creating a sample index.                          |varying sample size and range                           |sample          |41.5%       |3/5       |[link](benchmarks/sample_index/)        |00:00:12 |
 |2019-11-29 08:59:10 |get unique levels of factors                      |varying sample size and number of unique value          |unique(x)       |68.4%       |16/16     |[link](benchmarks/unique_values/)       |00:00:06 |

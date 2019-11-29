@@ -15,7 +15,7 @@ library(purrr)
 # test setup --------------------------------------------------------------
 
 # folder for results
-folder <- "benchmarks/sample index/"
+folder <- "benchmarks/sample_index/"
 
 # test description
 description <- "Creating a sample index."

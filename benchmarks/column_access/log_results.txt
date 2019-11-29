@@ -15,4 +15,4 @@ DATE;TEST;BEST;BEST_RUNS;GIRD;DURATION;REPS;ALTERNATIVES;COMMENT
 2019-11-21 15:27:55;Accsess a colum in a data frame, table or tibble.;$ tbl;67.1%;4/4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
 2019-11-26 16:38:51;Accsess a colum in a data frame, table or tibble.;[[ tbl;64.4%;3/4;00:00:05;<details>$ df, $ DT, $ tbl, [[ df, [[ DT, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
 2019-11-26 16:40:00;Accsess a colum in a data frame, table or tibble.;$ tbl;67.6%;4/4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-29 08:53:33;Accsess a colum in a data frame, table or tibble.;varying size of data;$ tbl;66.9%;4/4;[link](benchmarks/access a data colum/);00:00:06
+2019-11-29 08:53:33;Accsess a colum in a data frame, table or tibble.;varying size of data;$ tbl;66.9%;4/4;[link](benchmarks/column_access/);00:00:06
