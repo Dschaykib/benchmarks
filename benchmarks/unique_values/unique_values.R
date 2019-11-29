@@ -24,7 +24,7 @@ description <- "get unique levels of factors"
 reps <- 100L
 
 # if there is anything else to say
-comments <- ""
+comments <- "varying sample size and number of unique value"
 
 # example:
 # "getting a column out of a data table"

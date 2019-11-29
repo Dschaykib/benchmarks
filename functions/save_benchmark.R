@@ -62,6 +62,8 @@ save_benchmark <- function(result_list,
     paste0(alternatives, collapse = ", "),
     "</details>")
   
+  # details
+  details <- paste0("[link](", folder, ")")
   
   # saving last run
   result <- data.table(
@@ -69,6 +71,8 @@ save_benchmark <- function(result_list,
     DATE = Sys.time(),
     # description of the test
     TEST = description,
+    # further commentens
+    COMMENT = comments,
     # best solution
     BEST = best,
     # percent of mean saved time
@@ -77,14 +81,13 @@ save_benchmark <- function(result_list,
     BEST_RUNS = paste0(best_runs, "/", nrow(grid)),
     # if different setups are used (eg. variing n)
     #GRID = nrow(grid),
-    # duration of test
-    DURATION = time_char,
     # number of repetitions
     #REPS = reps,
     # number of tested alternatives
-    ALTERNATIVES = alternatives,
-    # further commentens
-    COMMENT = comments
+    #ALTERNATIVES = alternatives,
+    DETAILS = details,
+    # duration of test
+    DURATION = time_char
   )
   
   saveRDS(result, file = paste0(folder, "last_result.rds"))
@@ -187,8 +190,14 @@ save_benchmark <- function(result_list,
   readme <- c(
     paste0("## ", description, "\n"),
     "\n",
+    "tested alternatives:\n",
+    "<ul>",
+    paste0(levels(summary(result_list[[1]])$expr), collapse = "</ul><ul>"),
+    "</ul>",
     "\n",
     "## used grid settings \n",
+    comments,
+    "\n",
     knitr::kable(grid, format = "markdown"),
     "\n",
     if (length(this_picture_num) > 0 ) {

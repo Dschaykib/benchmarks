@@ -1,17 +1,18 @@
 DATE;TEST;BEST;BEST_RUNS;GIRD;DURATION;REPS;ALTERNATIVES;COMMENT
-2019-10-21 16:47:47;Accsess a colum in a data frame, table or tible.;$ tbl;1;1;00:00:35;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;
-2019-10-30 15:00:21;Accsess a colum in a data frame, table or tible.;$ tbl;1;1;00:00:00;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-10-31 11:23:11;Accsess a colum in a data frame, table or tible.;$ tbl;0.68410544907628;2;2;00:11:08;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-10-31 11:24:46;Accsess a colum in a data frame, table or tible.;$ tbl;68.4%;2;2;00:12:43;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-10-31 11:25:49;Accsess a colum in a data frame, table or tible.;$ tbl;67.5%;2;2;00:00:04;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-11 14:10:05;Accsess a colum in a data frame, table or tible.;[[ tbl;63.4%;1;2;00:00:09;<details>$ df, $ DT, $ tbl, [[ df, [[ DT, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-11 14:11:28;Accsess a colum in a data frame, table or tible.;$ tbl;67%;4;4;00:01:36;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-11 14:15:34;Accsess a colum in a data frame, table or tible.;$ tbl;65.4%;4;4;00:00:07;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-11 16:44:18;Accsess a colum in a data frame, table or tible.;$ tbl;68.4%;4;4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-11 16:45:12;Accsess a colum in a data frame, table or tible.;$ tbl;67.2%;4;4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-11 16:46:05;Accsess a colum in a data frame, table or tible.;$ tbl;67.1%;4;4;00:00:24;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-11 16:46:45;Accsess a colum in a data frame, table or tible.;$ tbl;67.1%;4;4;00:01:04;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-11 16:47:44;Accsess a colum in a data frame, table or tible.;$ tbl;67%;3;4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-21 15:27:55;Accsess a colum in a data frame, table or tible.;$ tbl;67.1%;4/4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-26 16:38:51;Accsess a colum in a data frame, table or tible.;[[ tbl;64.4%;3/4;00:00:05;<details>$ df, $ DT, $ tbl, [[ df, [[ DT, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
-2019-11-26 16:40:00;Accsess a colum in a data frame, table or tible.;$ tbl;67.6%;4/4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-10-21 16:47:47;Accsess a colum in a data frame, table or tibble.;$ tbl;1;1;00:00:35;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;
+2019-10-30 15:00:21;Accsess a colum in a data frame, table or tibble.;$ tbl;1;1;00:00:00;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-10-31 11:23:11;Accsess a colum in a data frame, table or tibble.;$ tbl;0.68410544907628;2;2;00:11:08;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-10-31 11:24:46;Accsess a colum in a data frame, table or tibble.;$ tbl;68.4%;2;2;00:12:43;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-10-31 11:25:49;Accsess a colum in a data frame, table or tibble.;$ tbl;67.5%;2;2;00:00:04;100;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-11 14:10:05;Accsess a colum in a data frame, table or tibble.;[[ tbl;63.4%;1;2;00:00:09;<details>$ df, $ DT, $ tbl, [[ df, [[ DT, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-11 14:11:28;Accsess a colum in a data frame, table or tibble.;$ tbl;67%;4;4;00:01:36;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-11 14:15:34;Accsess a colum in a data frame, table or tibble.;$ tbl;65.4%;4;4;00:00:07;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-11 16:44:18;Accsess a colum in a data frame, table or tibble.;$ tbl;68.4%;4;4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-11 16:45:12;Accsess a colum in a data frame, table or tibble.;$ tbl;67.2%;4;4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-11 16:46:05;Accsess a colum in a data frame, table or tibble.;$ tbl;67.1%;4;4;00:00:24;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-11 16:46:45;Accsess a colum in a data frame, table or tibble.;$ tbl;67.1%;4;4;00:01:04;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-11 16:47:44;Accsess a colum in a data frame, table or tibble.;$ tbl;67%;3;4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-21 15:27:55;Accsess a colum in a data frame, table or tibble.;$ tbl;67.1%;4/4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-26 16:38:51;Accsess a colum in a data frame, table or tibble.;[[ tbl;64.4%;3/4;00:00:05;<details>$ df, $ DT, $ tbl, [[ df, [[ DT, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-26 16:40:00;Accsess a colum in a data frame, table or tibble.;$ tbl;67.6%;4/4;00:00:06;<details>$ df, $ DT, [[ df, [[ DT, [[ tbl, [,5] df, name df, dplyr pull, DT [,x]</details>;varying size of data
+2019-11-29 08:53:33;Accsess a colum in a data frame, table or tibble.;varying size of data;$ tbl;66.9%;4/4;[link](benchmarks/access a data colum/);00:00:06

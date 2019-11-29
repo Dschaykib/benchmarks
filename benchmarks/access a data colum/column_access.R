@@ -17,7 +17,7 @@ library(dplyr)
 folder <- "benchmarks/access a data colum/"
 
 # test description
-description <- "Accsess a colum in a data frame, table or tible."
+description <- "Accsess a colum in a data frame, table or tibble."
 
 # number of repetitions
 reps <- 100L

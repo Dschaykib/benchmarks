@@ -5,3 +5,4 @@ DATE;TEST;BEST;BEST_RUNS;GIRD;DURATION;REPS;ALTERNATIVES;COMMENT
 2019-11-11 14:18:46;get unique levels of factors;unique(x);66.5%;16;16;00:00:07;<details>droplevels(x)</details>;
 2019-11-11 16:50:39;get unique levels of factors;unique(x);67.4%;16;16;00:00:06;<details>droplevels(x)</details>;
 2019-11-26 16:42:54;get unique levels of factors;unique(x);67.8%;16/16;00:00:05;<details>droplevels(x)</details>;
+2019-11-29 08:59:10;get unique levels of factors;varying sample size and number of unique value;unique(x);68.4%;16/16;[link](benchmarks/unique_values/);00:00:06
