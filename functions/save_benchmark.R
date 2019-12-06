@@ -108,12 +108,21 @@ save_benchmark <- function(result_list,
 
 # create plots ------------------------------------------------------------
   
+  this_unit <- attributes(result_list[[1]])$unit
+  
   grid[, INDEX := .I]
   get_mean_time <- function(i.grid, list) {
     #i.grid <- 1
     x <- result_list[[i.grid]]
     
-    time_dt <- as.data.table(x)[, list("MEAN_TIME" = mean(time)), by = expr]
+    # raw data is in nanoseconds
+    time_factor <- switch(this_unit,
+                          "ns" = 1e-0, # nanoseconds
+                          "us" = 1e-3, # microseconds
+                          "ms" = 1e-6, # milliseconds
+                          "s"  = 1e-9) # seconds
+    
+    time_dt <- as.data.table(x)[, list("MEAN_TIME" = mean(time) * time_factor), by = expr]
     time_dt[, INDEX := i.grid]
   }
   mean_dt <- rbindlist(lapply(grid$INDEX, get_mean_time, list = result_list),
@@ -140,7 +149,7 @@ save_benchmark <- function(result_list,
                                        measure.vars = measure_vars_char,
                                        variable.name = "PARAMETER_CHAR",
                                        value.name = "VALUE_CHAR")
-  this_unit <- attributes(result_list[[1]])$unit
+  
   
   # plot for numerics
   this_picture_num <- this_picture_char <- c()
