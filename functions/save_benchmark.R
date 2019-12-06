@@ -109,14 +109,14 @@ save_benchmark <- function(result_list,
 # create plots ------------------------------------------------------------
   
   grid[, INDEX := .I]
-  get_mean_time <- function(i.grid, list) {
+  get_mean_time <- function(i.grid, result_list) {
     #i.grid <- 1
     x <- result_list[[i.grid]]
     
     time_dt <- as.data.table(x)[, list("MEAN_TIME" = mean(time)), by = expr]
     time_dt[, INDEX := i.grid]
   }
-  mean_dt <- rbindlist(lapply(grid$INDEX, get_mean_time, list = result_list),
+  mean_dt <- rbindlist(lapply(grid$INDEX, get_mean_time, result_list = result_list),
                        use.names = TRUE,
                        fill = TRUE)
   # merge grid with mean_dt
