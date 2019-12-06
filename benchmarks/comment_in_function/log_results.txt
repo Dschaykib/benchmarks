@@ -1,0 +1,12 @@
+DATE;TEST;COMMENT;BEST;TIME_FACTOR;BEST_RUNS;DETAILS;DURATION
+2019-12-05 17:12:48;commented-out code;no comments vs. loads of comments;Alternative 1;NaN%;8/8;[link](benchmarks/comment_in_function/);00:00:01
+2019-12-05 17:13:13;commented-out code;no comments vs. loads of comments;Alternative 1;NaN%;8/8;[link](benchmarks/comment_in_function/);00:00:26
+2019-12-05 17:27:38;commented-out code;no comments vs. loads of comments;No comments;40.1%;7/7;[link](benchmarks/comment_in_function/);00:14:51
+2019-12-05 17:30:11;commented-out code;no comments vs. loads of comments;No comments;33%;7/7;[link](benchmarks/comment_in_function/);00:17:25
+2019-12-05 17:33:17;commented-out code;no comments vs. lots of comments;No comments;37.9%;7/7;[link](benchmarks/comment_in_function/);00:00:02
+2019-12-05 17:36:00;commented-out code;no comments vs. lots of comments;No comments;37.9%;7/7;[link](benchmarks/comment_in_function/);00:02:46
+2019-12-05 17:47:04;commented-out code;no comments vs. lots of comments;No comments;2.8%;4/7;[link](benchmarks/comment_in_function/);00:13:49
+2019-12-06 10:35:17;commented-out code;no comments vs. lots of comments;No comments;2.2%;7/7;[link](benchmarks/comment_in_function/);00:00:03
+2019-12-06 10:36:02;commented-out code;no comments vs. lots of comments;No comments;1.1%;6/7;[link](benchmarks/comment_in_function/);00:00:02
+2019-12-06 10:40:11;commented-out code;no comments vs. lots of comments;No comments;2.1%;7/7;[link](benchmarks/comment_in_function/);00:00:02
+2019-12-06 10:47:45;commented-out code;no comments vs. lots of comments;No comments;2.4%;7/7;[link](benchmarks/comment_in_function/);00:00:03

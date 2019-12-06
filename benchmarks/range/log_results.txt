@@ -6,3 +6,4 @@ DATE;TEST;BEST;BEST_RUNS;GIRD;DURATION;REPS;ALTERNATIVES;COMMENT
 2019-11-11 16:50:19;get range of numeric vector;max(x) - min(x);57.1%;6;6;00:00:16;<details>range(x)</details>;varying size
 2019-11-26 16:42:36;get range of numeric vector;max(x) - min(x);49.3%;6/6;00:00:15;<details>range(x)</details>;varying size
 2019-11-29 08:58:51;get range of numeric vector;varying size;max(x) - min(x);48.4%;6/6;[link](benchmarks/range/);00:00:14
+2019-12-06 10:52:47;get range of numeric vector;varying size;max(x) - min(x);49.9%;6/6;[link](benchmarks/range/);00:00:15

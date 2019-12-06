@@ -3,3 +3,4 @@ DATE;TEST;BEST;BEST_RUNS;GRID;DURATION;REPS;ALTERNATIVES;COMMENT
 2019-10-31 11:49:28;Calculation of the cross product;crossprod(S);49.5%;10;10;00:02:38;100;<details>t(S) %*% S</details>;varying number of rows and colums
 2019-11-26 16:51:39;Calculation of the cross product;crossprod(S);47.9%;10/10;00:02:47;<details>t(S) %*% S</details>;varying number of rows and colums
 2019-11-29 08:56:19;Calculation of the cross product;varying number of rows and colums;crossprod(S);12.1%;9/10;[link](benchmarks/crossproduct/);00:02:42
+2019-12-06 10:50:18;Calculation of the cross product;varying number of rows and colums;crossprod(S);24.3%;9/10;[link](benchmarks/crossproduct/);00:02:32

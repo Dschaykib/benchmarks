@@ -8,3 +8,4 @@ DATE;TEST;BEST;BEST_RUNS;GRID;DURATION;REPS;ALTERNATIVES;COMMENT
 2019-11-26 16:40:02;assign with <- or = ;equal sign;14.6%;6/6;00:00:01;<details>arrow sign</details>;varying size of vector
 2019-11-29 08:42:04;assign with <- or = ;equal sign;10%;6/6;00:00:01;[link](benchmarks/assignment/);varying size of vector
 2019-11-29 08:53:36;assign with <- or = ;varying size of vector;equal sign;27.4%;6/6;[link](benchmarks/assignment/);00:00:01
+2019-12-06 10:46:47;assign with <- or = ;varying size of vector;arrow sign;-0.6%;3/6;[link](benchmarks/assignment/);00:00:02
