@@ -10,3 +10,4 @@ DATE;TEST;BEST;TIME_FACTOR;BEST_RUNS;GRID;DURATION;ALTERNATIVES;COMMENT
 2019-11-26 16:42:20;Selection rows by a filter criterion.;DT %chin%;19.3%;10/20;00:01:46;<details>DT == &, DT %in%</details>;changing the colum type and the number of unique values
 2019-11-29 08:58:35;Selection rows by a filter criterion.;changing the colum type and the number of unique values;DT %in%;21.4%;12/20;[link](benchmarks/filter_selection/);00:01:45
 2019-12-06 10:52:30;Selection rows by a filter criterion.;changing the colum type and the number of unique values;DT %in%;16%;12/20;[link](benchmarks/filter_selection/);00:01:43
+2019-12-06 16:05:41;Selecting rows by a filter criterion.;changing the colum type and the number of unique values;DT == &;-147.7%;24/40;[link](benchmarks/filter_selection/);00:01:56

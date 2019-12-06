@@ -18,7 +18,7 @@ source("functions/save_benchmark.R")
 folder <- "benchmarks/filter_selection/"
 
 # test description
-description <- "Selection rows by a filter criterion."
+description <- "Selecting rows by a filter criterion."
 
 # number of repetitions
 reps <- 100L
@@ -33,7 +33,7 @@ start_time <- Sys.time()
 
 # if there are different values to test
 grid <- as.data.table(expand.grid(
-  n_rows = 10^c(5,6), # number of rows
+  n_rows = 10^c(3,4,5,6), # number of rows
   k_values = c(5,10,20,100,1000), # number of unique values
   var_type = c("numeric", "character"),
   stringsAsFactors = FALSE)) # type of column
@@ -49,17 +49,22 @@ helfRlein::checkdir(folder)
 # run for each grid possible
 
 for (i in c(1:nrow(grid))) {
-  # i <- 40
+  # i <- 17
   set.seed(1234)
   
   n_rows <- grid[i, n_rows]
   k_values <- grid[i, k_values]
   var_type <- grid[i, var_type]
   
+  if ( n_rows < k_values) {
+    stop("n_rows is smaller than k_values.")
+  }
+  
   # use grid parameters to define tested setup
   # set sample values and data
   this_values <- as.vector(x = 1:k_values, mode = var_type)
-  this_var <- sample(x = this_values, size = n_rows, replace = TRUE)
+  this_var <- c(this_values,
+                sample(x = this_values, size = (n_rows - k_values), replace = TRUE))
   
   data_dt <- data.table(Var1 = this_var)
   #data_df <- data.frame(Var1 = this_var)
