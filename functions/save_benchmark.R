@@ -133,7 +133,7 @@ save_benchmark <- function(result_list,
   id_vars <- c("INDEX", "expr", "MEAN_TIME")
   measure_vars <- setdiff(names(grid_mean_dt), id_vars)
   measure_vars_class <- grid_mean_dt[, sapply(.SD, class), .SDcol = measure_vars]
-  measure_vars_char <- measure_vars[measure_vars_class == "character"]
+  measure_vars_char <- measure_vars[measure_vars_class %in% c("character", "logical")]
   measure_vars_num <- measure_vars[measure_vars_class == "numeric"]
   
   grid_mean_dt_long <- melt.data.table(data = grid_mean_dt,

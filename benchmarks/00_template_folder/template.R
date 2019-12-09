@@ -32,7 +32,8 @@ start_time <- Sys.time()
 # if there are different values to test
 grid <- as.data.table(expand.grid(
   param_1 = 10^c(2:3),
-  param_2 = c(5,10,20)))
+  param_2 = c(5,10,20),
+  stringsAsFactors = FALSE))
 
 result_list <- as.list(rep(NA, dim(grid)[1]))
 best_list <- as.list(rep(NA, dim(grid)[1]))
