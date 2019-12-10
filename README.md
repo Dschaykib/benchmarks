@@ -13,8 +13,13 @@ respective folder within [benchmarks](../benchmarks).
 - A short description **TEST** of the benchmark.
 - In the **COMMENTS** I tried to give a hint of what the setups looked like.
 - The **BEST** option out of all tested alternatives compared by their mean time.
-- The **TIME_FACTOR** presents the mean time that can be saved with the best option compared with the mean of the alternatives over all grid setups.
-- **BEST_RUNS** is the number of cases were **BEST** solution was actually the best one in relation of all different varying setups that were used (e.g. sample size).
+- The **TIME_FACTOR** presents the mean time that can be saved with the best
+    option compared with the mean of the alternatives over all grid setups. 
+    **Note:** The time factor can be negative if the best option is not the
+    best in the cases where it takes more time. For these cases, have a look at
+    the details and dependencies of the grid parameters.
+- **BEST_RUNS** is the number of cases were **BEST** solution was actually
+    the best one in relation of all different varying setups that were used (e.g. sample size).
 - **DURATION** is the time the whole benchmark with all setups took.
 
 
