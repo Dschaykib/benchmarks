@@ -5,3 +5,6 @@ DATE;TEST;COMMENT;BEST;TIME_FACTOR;BEST_RUNS;DETAILS;DURATION
 2019-12-09 14:35:06;Subset between values of a vector;between vs. <= and >=;dplyr_between;-4.2%;28/64;[link](benchmarks/subset_between_values/);00:00:33
 2019-12-09 14:50:02;Subset between values of a vector;between vs. <= and >=;dplyr_between;-2.5%;30/64;[link](benchmarks/subset_between_values/);00:00:32
 2019-12-09 15:02:30;Subset between values of a vector;between vs. <= and >=;dplyr_between;0.3%;29/64;[link](benchmarks/subset_between_values/);00:00:32
+2019-12-10 10:13:48;Subset between values of a vector;between vs. <= and >=;dplyr_between;-8.2%;28/64;[link](benchmarks/subset_between_values/);00:00:46
+2019-12-10 10:15:23;Subset between values of a vector;between vs. <= and >=;dplyr_between;-1.2%;21/48;[link](benchmarks/subset_between_values/);00:00:37
+2019-12-10 10:16:20;Subset between values of a vector;between vs. <= and >=;dplyr_between;-1.2%;30/64;[link](benchmarks/subset_between_values/);00:00:32
