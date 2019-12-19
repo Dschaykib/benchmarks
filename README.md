@@ -3,7 +3,7 @@
 
 
 This is a collection of benchmark I collected over the years. 
-In [this blog post here](https://www.statworx.com/de/blog/) 
+In [this blog post here](https://www.statworx.com/de/blog/a-collection-of-benchmarks-in-r/) 
 I describe what I did and how new benchmarks can be added.
 For more results of a benchmark, please have a look in the 
 respective folder within [benchmarks](../benchmarks).
