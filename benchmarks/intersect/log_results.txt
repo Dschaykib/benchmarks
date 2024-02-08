@@ -1,3 +1,4 @@
 DATE;TEST;COMMENT;BEST;TIME_FACTOR;BEST_RUNS;DETAILS;DURATION
 2024-02-08 15:11:11;Is it faster to intersect or use which.;changing the length and the percentage of fits;which;32.7%;37/40;[link](benchmarks/intersect/);00:19:24
 2024-02-08 15:12:03;Is it faster to intersect or use which.;changing the length and the percentage of fits;which;32.7%;37/40;[link](benchmarks/intersect/);00:20:16
+2024-02-08 20:05:11;Is it faster to intersect or use which.;changing the length and the percentage of fits;which;31%;39/40;[link](benchmarks/intersect/);00:02:08

@@ -7,3 +7,4 @@ DATE;TEST;BEST;BEST_RUNS;GIRD;DURATION;REPS;ALTERNATIVES;COMMENT
 2019-11-26 16:42:48;Creating a sample index.;sample;43.2%;4/5;00:00:11;<details>runif, rdunif</details>;varying sample size and range
 2019-11-29 08:59:04;Creating a sample index.;varying sample size and range;sample;41.5%;3/5;[link](benchmarks/sample index/);00:00:12
 2019-12-06 10:53:07;Creating a sample index.;varying sample size and range;runif;11.6%;5/5;[link](benchmarks/sample_index/);00:00:18
+2024-02-08 20:05:32;Creating a sample index.;varying sample size and range;runif;77.9%;5/5;[link](benchmarks/sample_index/);00:00:12

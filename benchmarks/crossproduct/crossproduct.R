@@ -5,7 +5,7 @@ library(microbenchmark)
 library(helfRlein)
 library(data.table)
 
-source("functions/save_benchmark.R")
+sapply(list.files("functions/", full.names = TRUE), source)
 # add more here
 #
 #
@@ -20,7 +20,7 @@ folder <- "benchmarks/crossproduct/"
 description <- "Calculation of the cross product"
 
 # number of repetitions
-reps <- 100L
+reps <- 50L
 
 comments <- "varying number of rows and colums"
 

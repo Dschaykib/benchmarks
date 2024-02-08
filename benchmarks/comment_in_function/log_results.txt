@@ -10,3 +10,6 @@ DATE;TEST;COMMENT;BEST;TIME_FACTOR;BEST_RUNS;DETAILS;DURATION
 2019-12-06 10:36:02;commented-out code;no comments vs. lots of comments;No comments;1.1%;6/7;[link](benchmarks/comment_in_function/);00:00:02
 2019-12-06 10:40:11;commented-out code;no comments vs. lots of comments;No comments;2.1%;7/7;[link](benchmarks/comment_in_function/);00:00:02
 2019-12-06 10:47:45;commented-out code;no comments vs. lots of comments;No comments;2.4%;7/7;[link](benchmarks/comment_in_function/);00:00:03
+2024-02-08 19:58:38;commented-out code;no comments vs. lots of comments;No comments;2.9%;7/7;[link](benchmarks/comment_in_function/);00:00:01
+2024-02-08 20:01:32;commented-out code;no comments vs. lots of comments;No comments;2.9%;7/7;[link](benchmarks/comment_in_function/);00:00:01
+2024-02-08 20:02:02;commented-out code;no comments vs. lots of comments;No comments;3%;7/7;[link](benchmarks/comment_in_function/);00:00:01

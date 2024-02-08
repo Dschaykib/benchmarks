@@ -5,9 +5,7 @@ library(microbenchmark)
 library(helfRlein)
 library(data.table)
 
-source("functions/save_benchmark.R")
-source("functions/update_bench_overview.R")
-
+sapply(list.files("functions/", full.names = TRUE), source)
 
 # add more here
 #

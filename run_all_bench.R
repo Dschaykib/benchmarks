@@ -23,11 +23,11 @@ bench_files <- bench_files[!grepl("template.R", bench_files)]
 
 
 # run all benchmarks -------------------------------------------------------
-
-for (i.bench in bench_files) {
+i_bench <- bench_files[1]
+for (i_bench in bench_files) {
   # i.bench <- bench_files[2]
-  print(basename(i.bench))
-  source(file = i.bench, local = TRUE)
+  cat("------ Benchmark: ", basename(i_bench), "------\n")
+  source(file = i_bench, local = TRUE)
 }
 
 

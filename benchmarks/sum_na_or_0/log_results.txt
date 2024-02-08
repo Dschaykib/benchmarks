@@ -5,3 +5,4 @@ DATE;TEST;BEST;TIME_FACTOR;BEST_RUNS;DURATION;ALTERNATIVES;COMMENT
 2021-02-11 17:09:50;Is it faster to sum over 0's or NA's.;changing the length and the percentage of NA's and 0's;sum with 0;0.4%;14/20;[link](benchmarks/sum_na_or_0/);00:00:02
 2021-02-11 17:13:54;Is it faster to sum over 0's or NA's.;changing the length and the percentage of NA's and 0's;sum with 0;34%;16/20;[link](benchmarks/sum_na_or_0/);00:00:02
 2021-02-11 17:14:37;Is it faster to sum over 0's or NA's.;changing the length and the percentage of NA's and 0's;sum with 0;40.1%;5/5;[link](benchmarks/sum_na_or_0/);00:00:08
+2024-02-08 20:06:01;Is it faster to sum over 0's or NA's.;changing the length and the percentage of NA's and 0's;sum with 0;43.9%;4/5;[link](benchmarks/sum_na_or_0/);00:00:14

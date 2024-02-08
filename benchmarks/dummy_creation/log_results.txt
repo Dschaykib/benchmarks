@@ -7,3 +7,5 @@ DATE;TEST;BEST;TIME_FACTOR;BEST_RUNS;GRID;DURATION;ALTERNATIVES;COMMENT
 2019-11-26 16:40:32;Creating dummies out of factor variable.;by;53.3%;8/12;00:00:29;<details>lapply, for-loop</details>;changing size and number of unique values
 2019-11-29 08:56:49;Creating dummies out of factor variable.;changing size and number of unique values;by;49.8%;7/12;[link](benchmarks/dummy_creation/);00:00:29
 2019-12-06 10:50:46;Creating dummies out of factor variable.;changing size and number of unique values;by;50.6%;6/12;[link](benchmarks/dummy_creation/);00:00:27
+2024-02-08 20:00:51;Creating dummies out of factor variable.;changing size and number of unique values;by;41.3%;8/12;[link](benchmarks/dummy_creation/);00:00:10
+2024-02-08 20:02:13;Creating dummies out of factor variable.;changing size and number of unique values;lapply;35.1%;7/12;[link](benchmarks/dummy_creation/);00:00:10
