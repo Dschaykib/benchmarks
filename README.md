@@ -25,15 +25,17 @@ respective folder within [benchmarks](../benchmarks).
 
 
 
-|DATE                |TEST                                              |COMMENT                                                 |BEST            |TIME_FACTOR |BEST_RUNS |DETAILS                                   |DURATION |
-|:-------------------|:-------------------------------------------------|:-------------------------------------------------------|:---------------|:-----------|:---------|:-----------------------------------------|:--------|
-|2019-12-06 10:46:47 |assign with <- or =                               |varying size of vector                                  |arrow sign      |-0.6%       |3/6       |[link](benchmarks/assignment/)            |00:00:02 |
-|2019-12-06 10:47:18 |Accsess a colum in a data frame, table or tibble. |varying size of data                                    |$ df            |58%         |4/4       |[link](benchmarks/column_access/)         |00:00:25 |
-|2019-12-06 10:47:45 |commented-out code                                |no comments vs. lots of comments                        |No comments     |2.4%        |7/7       |[link](benchmarks/comment_in_function/)   |00:00:03 |
-|2019-12-06 10:50:18 |Calculation of the cross product                  |varying number of rows and colums                       |crossprod(S)    |24.3%       |9/10      |[link](benchmarks/crossproduct/)          |00:02:32 |
-|2019-12-06 10:50:46 |Creating dummies out of factor variable.          |changing size and number of unique values               |by              |50.6%       |6/12      |[link](benchmarks/dummy_creation/)        |00:00:27 |
-|2019-12-06 16:05:41 |Selecting rows by a filter criterion.             |changing the colum type and the number of unique values |DT == &         |-147.7%     |24/40     |[link](benchmarks/filter_selection/)      |00:01:56 |
-|2019-12-06 10:52:47 |get range of numeric vector                       |varying size                                            |max(x) - min(x) |49.9%       |6/6       |[link](benchmarks/range/)                 |00:00:15 |
-|2019-12-06 10:53:07 |Creating a sample index.                          |varying sample size and range                           |runif           |11.6%       |5/5       |[link](benchmarks/sample_index/)          |00:00:18 |
-|2019-12-10 10:16:20 |Subset between values of a vector                 |between vs. <= and >=                                   |dplyr_between   |-1.2%       |30/64     |[link](benchmarks/subset_between_values/) |00:00:32 |
-|2019-12-06 10:53:15 |get unique levels of factors                      |varying sample size and number of unique value          |unique(x)       |64.6%       |16/16     |[link](benchmarks/unique_values/)         |00:00:07 |
+|DATE                |TEST                                              |COMMENT                                                 |BEST            |TIME_FACTOR |BEST_RUNS |DETAILS |DURATION |
+|:-------------------|:-------------------------------------------------|:-------------------------------------------------------|:---------------|:-----------|:---------|:-------|:--------|
+|2019-12-06 10:46:47 |assign with <- or =                               |varying size of vector                                  |arrow sign      |-0.6%       |3/6       |[link](benchmarks/assignment/)|00:00:02 |
+|2019-12-06 10:47:18 |Accsess a colum in a data frame, table or tibble. |varying size of data                                    |$ df            |58%         |4/4       |[link](benchmarks/column_access/)|00:00:25 |
+|2019-12-06 10:47:45 |commented-out code                                |no comments vs. lots of comments                        |No comments     |2.4%        |7/7       |[link](benchmarks/comment_in_function/)|00:00:03 |
+|2019-12-06 10:50:18 |Calculation of the cross product                  |varying number of rows and colums                       |crossprod(S)    |24.3%       |9/10      |[link](benchmarks/crossproduct/)|00:02:32 |
+|2019-12-06 10:50:46 |Creating dummies out of factor variable.          |changing size and number of unique values               |by              |50.6%       |6/12      |[link](benchmarks/dummy_creation/)|00:00:27 |
+|2019-12-06 16:05:41 |Selecting rows by a filter criterion.             |changing the colum type and the number of unique values |DT == &         |-147.7%     |24/40     |[link](benchmarks/filter_selection/)|00:01:56 |
+|2024-02-08 15:12:03 |Is it faster to intersect or use which.           |changing the length and the percentage of fits          |which           |32.7%       |37/40     |[link](benchmarks/intersect/)|00:20:16 |
+|2019-12-06 10:52:47 |get range of numeric vector                       |varying size                                            |max(x) - min(x) |49.9%       |6/6       |[link](benchmarks/range/)|00:00:15 |
+|2019-12-06 10:53:07 |Creating a sample index.                          |varying sample size and range                           |runif           |11.6%       |5/5       |[link](benchmarks/sample_index/)|00:00:18 |
+|2019-12-10 10:16:20 |Subset between values of a vector                 |between vs. <= and >=                                   |dplyr_between   |-1.2%       |30/64     |[link](benchmarks/subset_between_values/)|00:00:32 |
+|2021-02-11 17:14:37 |Is it faster to sum over 0's or NA's.             |changing the length and the percentage of NA's and 0's  |sum with 0      |40.1%       |5/5       |[link](benchmarks/sum_na_or_0/)|00:00:08 |
+|2019-12-06 10:53:15 |get unique levels of factors                      |varying sample size and number of unique value          |unique(x)       |64.6%       |16/16     |[link](benchmarks/unique_values/)|00:00:07 |
